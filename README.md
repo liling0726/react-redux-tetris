@@ -6,6 +6,7 @@
 - less
 - 利用postcss添加前缀，以及px转rem
 - es6转es5
+- 静态服务器
 
 ## 下载
 ```

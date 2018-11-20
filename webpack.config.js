@@ -24,8 +24,14 @@ module.exports = {
     rules: [
       // svg
       {
-        test: /\.svg$/,
-        use: ['file-loader']
+        test: /\.(svg|png|jpg|gif)$/,
+        use: [{
+          loader:'file-loader',
+          options:{
+            name:'[name].[ext]',
+            outputPath:'images/'
+          }
+        }]
       },
       //less
       {

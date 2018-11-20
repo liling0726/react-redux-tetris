@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack --mode development"
+    "start": "webpack --mode development",
+    "dev": "webpack-dev-server --mode development"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +40,7 @@
     "svg-inline-loader": "^0.8.0",
     "svg-url-loader": "^2.3.2",
     "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
