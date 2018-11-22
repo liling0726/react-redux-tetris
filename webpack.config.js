@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
 console.log(__dirname)
 module.exports = (env, args) => ({
-  devtool: args.mode === 'development' ? 'source-maps' : 'eval',
+  devtool: 'source-maps',
   entry: {
     index: './src/index.js',
     vendor: [
