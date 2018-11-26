@@ -12,7 +12,7 @@ export default class Block extends React.Component {
         {
           blocks.map((item, index) => {
             
-            return <b className={classnames('block-item',{clear:item.block,right:item.isRight})}></b >
+            return <b className={classnames('block-item',{clear:item.block,right:item.isRight})} key={index}></b >
           })
         }
       </div >

@@ -2,11 +2,43 @@
   display: flex;
   padding-top: 100px;
   .view {
-    padding:0 15px;
-    width:100px;
+    padding:0 10px;
+    width:80px;
   }
   .content {
     flex: 1 1 640px;
-    border: 10px solid #000;
+    border: solid #000;
+    border-width: 0 5px 5px;
+    position: relative;
+  }
+  .decorate-title{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    display: flex;
+    .title-block{
+      display: inline-block;
+      vertical-align: top;
+      background: #000;
+      width: 5px;
+      height: 5px;
+      margin-right:5px;
+      &:last-child{
+        margin-right:0;
+      }
+      &.special{
+        width: 40px;
+      }
+    }
+    .title{
+      flex:1;
+      font-size:14px;
+      text-align: center;
+      font-weight: normal;
+      line-height: 20px;
+      margin-top:-10px;
+      vertical-align: middle;
+    }
   }
 }

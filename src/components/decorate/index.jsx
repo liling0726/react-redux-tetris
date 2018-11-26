@@ -6,9 +6,12 @@ import './index.less';
 
 export default class Decorate extends React.Component {
   setTitleDecorate = (specialId) => {
-    return [1, 2, 3, 4, 5].map((item, index) => {
-      return <span class={classnames('title-block', { special: specialId === index })} ></span>
-    })
+    return <div className="title-decorate-wrap">
+      {[1, 2, 3, 4, 5].map((item, index) => {
+        return <span className={classnames('title-block', { special: specialId === index })} key={index}></span>
+      })
+      }
+    </div>
   }
   render() {
     return (
@@ -25,9 +28,11 @@ export default class Decorate extends React.Component {
             {
               this.setTitleDecorate(0)
             }
+            <h4 className="title">俄罗斯方块</h4>
             {
               this.setTitleDecorate(4)
             }
+
           </div>
         </div>
         <div className="view">
