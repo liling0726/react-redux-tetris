@@ -8,7 +8,7 @@ module.exports = {
                 "> 0.01%"
             ]
         }),
-        pxToRem({remUnit: 75})
+       /*  pxToRem({remUnit: 75}) */
 
     ]
 }

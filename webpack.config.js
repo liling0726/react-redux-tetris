@@ -13,6 +13,13 @@ module.exports = (env, args) => ({
       'react-dom',
     ]
   },
+  resolve: {
+    alias: {
+      '@src': path.join(__dirname, 'src'),
+      '@components':path.join(__dirname, 'src/components')
+    },
+    extensions:['.jsx','.js'] // 配置这项之后，会覆盖默认的数组
+  },
   devServer: {
     hot: true // dev server 的配置要启动 hot，或者在命令行中带参数开启
   },
@@ -88,7 +95,13 @@ module.exports = (env, args) => ({
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader', // 用什么loader提取css文件
           use: [ // 指定什么样的loader去编译文件
-            'css-loader',
+            {
+              loader:'css-loader',
+              options:{
+                importLoaders:1,
+                modules: false //是否开启模块化
+              }
+            },
             'postcss-loader',
             'less-loader',
           ],
